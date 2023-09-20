@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Knight League </title>
+		<link href='Style.css' rel='stylesheet'>
+		<meta charset="utf-8">
+		
+	</head>
+	<body>
+
+		<div id="main">
+			<div id="gameName"></div>
+			<input id="nicknameInput" class="ok" placeholder="Set nickname" spellcheck="false" onfocusout="checkEmptyInput()">
+			<div id="findGame"  class="actionButton"> Find Game </div>
+			<div id="createGame" class="actionButton"> Create Game </div>
+			<div id="howToPlay" class="actionButton"> How to play </div>
+		</div>
+		<script>
+		
+			function checkEmptyInput(){
+				
+				if(nicknameInput.value!=''){		
+					nicknameInput.style.border = "7px solid #282c42";
+					nicknameInput.style.color = "#5c6282";
+					nicknameInput.classList.remove("error");					
+				}
+				else{
+					nicknameInput.style.border = "7px solid #893b3b";
+					nicknameInput.style.color = "#b06161";
+					nicknameInput.classList.add("error");
+				}
+				
+			}
+		</script>
+		<script src='Main menu.js'></script>
+	</body>
+</html>

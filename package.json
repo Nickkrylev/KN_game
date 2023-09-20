@@ -1,0 +1,20 @@
+{
+  "name": "main_package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "test": "electromon main.js",
+    "build": "electron-packager . KnightLeague --icon=appIcon.png"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electromon": "^1.0.10",
+    "electron": "^11.5.0",
+    "electron-packager": "^15.2.0",
+    "express": "^4.17.1",
+    "socket.io": "^3.1.1"
+  }
+}

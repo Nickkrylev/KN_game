@@ -1,0 +1,210 @@
+html {
+				
+				margin: 0px;
+				height: 100%;
+				width: 100%;
+				background: url("Menu.jpg") no-repeat;
+				user-select: none;
+				cursor: url("../Cursor/Cursor default.png"), default;
+				
+			}
+			
+			::selection {
+			
+			    color: #e3e9f0;
+			    background: #5c6282;
+			  
+			}
+			
+			@font-face{
+			
+				font-family: "AGFatumC Bold";
+				src: url("AGFatumC Bold.otf");
+				
+			}
+			
+			#main {
+			
+				position: absolute;
+				top: 96px;
+				left: 575px;
+				height: 90%;
+				width: 40.10%;
+			
+			}
+			
+			#gameName {
+			
+				position: absolute;
+				left: 0px;
+				height: 406px;
+				width: 771px;
+				background-color: #ebe9f3;
+				background: url("Game Name.png");
+				background-repeat: no-repeat;
+				background-position: center;
+			
+			}
+			
+			#nicknameInput {
+			
+				position: absolute;
+				padding-left: 1.8%;
+				top: 45.09%;
+				left: calc(50% - 207px);
+				height: 80px;
+				width: 384px;
+				background-color: #e3e9f0;
+				border: 7px solid #282c42;
+				border-radius: 7px;
+				color: #5c6282;
+				font-size: 44px;
+				font-family: "AGFatumC Bold";
+				outline: none;
+				cursor: url("../Cursor/Cursor text.png"), text;
+				-moz-appearance: textfield;
+				z-index:10000;
+				
+			}
+			#nicknameInput::-webkit-inner-spin-button { 
+                display: none;
+            }
+			#connectInput1 {
+			
+				position: absolute;
+				padding-left: 1.8%;
+				top: 45.09%;
+				left: calc(50% - 207px);
+				height: 80px;
+				width: 384px;
+				background-color: #e3e9f0;
+				border: 7px solid #282c42;
+				border-radius: 7px;
+				color: #5c6282;
+				font-size: 44px;
+				font-family: "AGFatumC Bold";
+				outline: none;
+				cursor: url("../Cursor/Cursor text.png"), text;
+				-moz-appearance: textfield;
+				z-index:10000;
+				
+			}
+			#connectInput2 {
+			
+				position: absolute;
+				padding-left: 1.8%;
+				top: 45.09%;
+				left: calc(50% - 207px);
+				height: 80px;
+				width: 384px;
+				background-color: #e3e9f0;
+				border: 7px solid #282c42;
+				border-radius: 7px;
+				color: #5c6282;
+				font-size: 44px;
+				font-family: "AGFatumC Bold";
+				outline: none;
+				cursor: url("../Cursor/Cursor text.png"), text;
+				-moz-appearance: textfield;
+				z-index:10000;
+				
+			}
+
+			
+			#connectInput1::-webkit-inner-spin-button { 
+                display: none;
+            }
+			
+			#connectInput2::-webkit-inner-spin-button { 
+                display: none;
+            }
+			
+			.ok::placeholder {
+			
+			    color: #5c6282;
+				font-size: 44px;
+				font-family: "AGFatumC Bold";
+			  
+			}
+			
+			.error::placeholder {
+			
+			    color: #b06161;
+				font-size: 44px;
+				font-family: "AGFatumC Bold";
+			  
+			}
+			
+			#nicknameInput.error {
+			  animation: error_anim 0.15s linear;
+			}
+			
+			#connectInput1.error {
+			  animation: error_anim 0.15s linear;
+			}
+			
+			#connectInput2.error {
+			  animation: error_anim 0.15s linear;
+			}
+			
+			@keyframes error_anim {
+				0% {left: calc(50% - 207px);}
+				25% {left: calc(50% - 217px);}
+				50% {left: calc(50% - 207px);}
+				75% {left: calc(50% - 197px);}
+				100% {left: calc(50% - 207px);}
+			}
+			
+			#findGame {
+			
+				position: absolute;
+				top: 57.87%;
+				left: calc(50% - 207px);
+			    text-decoration:none;
+			}
+			
+			#createGame {
+			
+				position: absolute;
+				top: 70.65%;
+				left: calc(50% - 207px);
+			
+			}
+			
+			#howToPlay {
+			
+				position: absolute;
+				top: 83.52%;
+				left: calc(50% - 207px);
+			
+			}
+			#ConnectToserver{
+		 
+				position: absolute;
+				top: 57.87%;
+				left: calc(50% - 207px);
+			    text-decoration:none;
+			}
+			#back{
+				
+				position: absolute;
+				top: 70.65%;
+				left: calc(50% - 207px);
+				text-decoration:none;
+				
+			}
+			
+			.actionButton {
+				
+				height: 96px;
+				width: 414px;
+				background-color: #282c42;
+				border-radius: 7px;
+				text-align: center;
+				line-height: 96px;
+				color: #e3e9f0;
+				font-size: 53px;
+				font-family: "AGFatumC Bold";
+				cursor: url("../Cursor/Cursor pointer.png"), pointer;
+				
+			}

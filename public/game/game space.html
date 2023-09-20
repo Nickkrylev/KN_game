@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<link rel='stylesheet' href='Style.css'>
+		<script defer src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js' ></script>
+		<script defer src='moving.js'></script>
+		<script defer src='reset_button.js'></script>
+		<script defer src='flag.js'></script>
+		<script defer src='connect.js'></script>
+		<script defer src='potion.js'></script>
+		<script src='timer.js' ></script>
+		
+	</head>
+	<body>
+		<div id='Timer'>
+			<div id='TimerScoreBlue'>0</div>
+			<div id='TimerScoreRed'>0</div>
+			<div id='TimerMinutes'>01</div>
+			<div id='TimerSeconds'>30</div>
+		</div>
+		<div id='Panel'>
+			<div id='PanelIcon1'></div>
+			<div id='PanelIcon2'></div>
+			<div id='HPAndMPWoodenFrame'></div>
+			<div id='HPBar'><div id='HP'></div></div>
+			<div id='MPBar'><div id='MP'></div></div>
+			<div id='PanelIcon3'></div>
+			<div id='PanelIcon4'></div>
+		</div>
+		<div id='Score'>
+			<div id='ScoreOverlay'></div>
+			<div id='ScoreBlueBox'><div id='ScoreBlue'>0</div></div>
+			<div id='ScoreWoodenFrameBlue'></div>
+			<div id='ScoreRedBox'><div id='ScoreRed'>0</div></div>
+			<div id='ScoreWoodenFrameRed'></div>
+		</div>
+		<video autoplay muted loop id="SkyBackground">
+		    <source src="Sky Background.mp4" type="video/mp4">
+		</video>
+		<div id='moon'></div>
+		<div id='Main_character_box' ><div id='Main_character'><div class='Main_craracter_blue'></div></div></div>
+		<!--<div id='playerElem1'><div id='playerElem'></div></div>-->
+		<!--<div id='playerElem'><img class='hero' src='Character.png'></div>-->
+		
+		<div id='game_space'>
+		<div id='players_box'></div>
+			<div id='TeamBlueIsland' class='TeamIsland'></div>
+			<div id='TeamBlueCastleBack1'></div>
+			<div id='TeamBlueFlagpole' class='flagpole'></div>
+			<div id='SingleFlagBlue'></div>
+			<div id='TeamBlueCastleFront'></div>
+			
+			<!--<div id='potion2' class='potion'></div>-->
+			
+			<div id='platform8'><img class='island' src='Small Island.png'></div>
+			
+			<!--<div id='platform7'><img class='island' src='Team Blue Island.png'></div>-->
+			<div id='TeamRedIsland' class='TeamIsland'></div>
+			<div id='TeamRedCastleBack1'></div>
+			<div id='TeamRedFlagpole' class='flagpole'></div>
+			<div id='SingleFlagRed'></div>
+			<div id='TeamRedCastleFront'></div>
+			
+			<div id='platform6'><img class='island' src='Small Island.png'></div>
+			<div id='platform5'><img class='island' src='Small Island.png'></div>
+			<div id='platform4'><img class='island' src='Big Island.png'></div>
+			<div id='platform3'><img class='island' src='Small Island.png'></div>
+			<div id='platform2'><img class='island' src='Small Island.png'></div>
+			
+			<div id='platform9'><img class='island' src='Big Island.png'></div>
+			<div id='potion1' class='potion'></div>
+			<div id='platform10'><img class='island' src='Small Island.png'></div>
+			<div id='platform11'><img class='island' src='Big Island.png'></div>
+			<div id='platform12'><img class='island' src='Small Island.png'></div>
+			<div id='platform13'><img class='island' src='Small Island.png'></div>
+			<div id='platform14'><img class='island' src='Small Island.png'></div>
+			<div id='platform15'><img class='island' src='Small Island.png'></div>
+			
+			<div id='flag'></div>
+		</div>
+	</body>
+</html>

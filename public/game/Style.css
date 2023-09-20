@@ -1,0 +1,549 @@
+/*General*/
+html,body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	cursor: none;
+	user-select: none;
+}
+@font-face{
+	
+	font-family: "AGFatumC Bold";
+	src: url("AGFatumC Bold.otf");
+	
+}
+#Timer{
+	position: fixed;
+	left: calc(50% - 230.5px);
+	top: 0;
+	width: 461px;
+	height: 75px;
+	background-image: url('Timer.png');
+	background-size: 100% 100%;
+	z-index: 500;
+}
+#TimerScoreBlue {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 25.5px;
+	color: #e3e9f0;
+	font-size: 55px;
+	font-family: "AGFatumC Bold";
+	-webkit-text-stroke: 2px #333a51;	
+}
+#TimerScoreRed {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 398.7px;
+	color: #e3e9f0;
+	font-size: 55px;
+	font-family: "AGFatumC Bold";
+	-webkit-text-stroke: 2px #513333;	
+}
+#TimerMinutes {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 152px;
+	letter-spacing: -3px;
+	color: #e3e9f0;
+	font-size: 55px;
+	font-family: "AGFatumC Bold";
+	-webkit-text-stroke: 2px #21263a;	
+}
+#TimerSeconds {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 237px;
+	letter-spacing: -3px;
+	color: #e3e9f0;
+	font-size: 55px;
+	font-family: "AGFatumC Bold";
+	-webkit-text-stroke: 2px #21263a;	
+}
+#Panel {
+	position: fixed;
+	left: calc(50% - 260.5px);
+	bottom: 0;
+	width: 521px;
+	height: 110px;
+	background-image: url('Panel.png');
+	background-size: 100% 100%;
+	z-index: 500;
+}
+#PanelIcon1 {
+	position: fixed;
+	left: calc(50% - 237.5px);
+	bottom: 16px;
+	width: 75px;
+	height: 62px;
+	background-image: url('Panel Icon 1.png');
+	background-size: 100% 100%;
+	z-index: 500;
+}
+#PanelIcon2 {
+	position: fixed;
+	left: calc(50% - 143.5px);
+	bottom: 16px;
+	width: 75px;
+	height: 62px;
+	background-image: url('Panel Icon 2.png');
+	background-size: 100% 100%;
+	z-index: 500;
+}
+#HPAndMPWoodenFrame {
+	position: fixed;
+	left: calc(50% - 55.5px);
+	width: 110px;
+	height: 110px;
+	background-image: url('HPAndMPWoodenFrame.png');
+	background-size: 100% 100%;
+	z-index: 505;
+}
+#HPBar{
+	position: relative;
+	left: calc(50% - 50.5px);
+	top: 6px;
+	width: 47px;
+	height: 98px;
+	background-color: #867b86;
+	border-top-left-radius: 200px;
+	border-bottom-left-radius: 200px;
+	z-index: 500;
+	overflow: hidden;
+}
+#HP{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 47px;
+	height: 20px;
+	background-color: #944243;
+}
+#MPBar{
+	position: relative;
+	left: calc(50% + 2.5px);
+	top: -92px;
+	width: 47px;
+	height: 98px;
+	background-color: #867b86;
+	border-top-right-radius: 200px;
+	border-bottom-right-radius: 200px;
+	z-index: 500;
+	overflow: hidden;
+}
+#MP{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 47px;
+	height: 98px;
+	background-color: #426493;
+}
+#PanelIcon3 {
+	position: fixed;
+	left: calc(50% + 68.5px);
+	bottom: 16px;
+	width: 75px;
+	height: 62px;
+	background-image: url('Panel Icon 3.png');
+	background-size: 100% 100%;
+	z-index: 500;
+}
+#PanelIcon4 {
+	position: fixed;
+	left: calc(50% + 162.5px);
+	bottom: 16px;
+	width: 75px;
+	height: 62px;
+	background-image: url('Panel Icon 4.png');
+	background-size: 100% 100%;
+	z-index: 500;
+	display: none;
+}
+#Score {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1000;
+}			
+#ScoreOverlay {
+	width: 100%;
+	height: 100%;
+	background-image: url("Score.jpg");
+	background-size: 100% 100%;
+}
+#ScoreBlueBox {
+	position: absolute;
+	top: calc(50% - 388.5px);
+	left: 328px;
+	width: 572px;
+	height: 777px;
+	background-color: #426395;
+}
+#ScoreRedBox {
+	position: absolute;
+	top: calc(50% - 388.5px);
+	right: 328px;
+	width: 572px;
+	height: 777px;
+	background-color: #944243;
+}
+#ScoreBlue {
+	position: absolute;
+	top: 100px;
+	right: calc(50% - 144px);
+	color: #e3e9f0;
+	font-size: 420px;
+	font-family: "AGFatumC Bold";
+	-webkit-text-stroke: 7px #333a51;	
+}
+#ScoreRed {
+	position: absolute;
+	top: 100px;
+	right: calc(50% - 144px);
+	width: 288px;
+	color: #e3e9f0;
+	font-size: 420px;
+	font-family: "AGFatumC Bold";
+	-webkit-text-stroke: 7px #513333;	
+}		
+#ScoreWoodenFrameBlue {
+	position: absolute;
+	top: calc(50% - 388.5px);
+	left: 328px;
+	width: 572px;
+	height: 777px;
+	background-image: url("ScoreWoodenFrame.png");
+	background-size: 100% 100%;
+}
+#ScoreWoodenFrameRed {
+	position: absolute;
+	top: calc(50% - 388.5px);
+	right: 328px;
+	width: 572px;
+	height: 777px;
+	background-image: url('ScoreWoodenFrame.png');
+	background-size: 100% 100%;
+}
+#SkyBackground{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+}
+#moon{
+	position: absolute;
+	top: 6%;
+	right: 5%;
+	height : 9%;
+	width : 5%;
+	background-image: url('Moon.png');
+	background-size: 100% 100%;
+}
+.Main_craracter_blue{
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50% - 50px);
+	width: 101px;
+	height: 100px;
+	/*width: 5.260417%;
+	height: 9.259%;*/
+	background-image: url('');
+	background-size: 100% 100%;
+	z-index: 20;
+}
+#Main_character{
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50% - 50px);
+	width: 101px;
+	height: 100px;
+	/*width: 5.260417%;
+	height: 9.259%;*/
+	background-image: url('Character Blue Right.png');
+	background-size: 100% 100%;
+	z-index: 20;
+}
+.player{
+	position: absolute;
+	width: 101px;
+	height: 100px;
+	/*width: 5.260417%;
+	height: 9.259%;*/
+	background-image: url('');
+	background-size: 100% 100%;
+	z-index: 15;
+}
+
+
+
+
+/*#playerElem{
+	height : 100px;
+	width : 101px;
+	position : absolute;
+	z-index: 20;
+	top:calc(50% - 50px);
+	left:calc(50% - 50px);
+}
+.hero{
+	height : 100px;
+	width : 101px;
+	position : absolute;
+	z-index: 10;
+}*/
+#flag{
+	position: relative;
+	left: 4500px;
+	top: 900px;
+	height: 2.1412%;
+	width: 0.673%;
+	background-image: url('Flag Frames.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	animation: flag_anim 0.5s steps(12) infinite;
+	z-index: 19;
+}
+@keyframes flag_anim{
+    from{background-position-x:0%;}
+    to{background-position-x:109.085%;}
+}
+#game_space{
+	position: relative;
+	top: calc(50% - 950px);
+	left: calc(50% - 600px);
+	width: 12000px;
+	height: 5000px;
+	margin: 0;
+}
+
+/*Team*/
+.TeamIsland{
+	width : 8.625%;
+	height : 8.5%;
+}
+.flagpole{
+	position: absolute;
+	width: 0.05%;
+	height: 12.76%;
+	background-image: url('Flagpole.png');
+	background-size: 100% 100%;
+}
+@keyframes single_flag_anim{
+    from{background-position-x:0%;}
+    to{background-position-x:109.085%;}
+}
+
+/*Team Blue*/
+#TeamBlueIsland{
+	position: absolute;
+	left: 4.025%;
+	top: 19.96%;
+	background-image: url('Team Blue Island.png');
+	background-size: 100% 100%;
+}
+#TeamBlueCastleBack1{
+	position: absolute;
+	left: 4.375%;
+	top: 9.39%;
+	width: 7.7083%;
+	height: 11.72%;
+	background-image: url('Castle Back Blue 2.png');
+	background-size: 100% 100%;
+}
+#TeamBlueCastleFront{
+	position: absolute;
+	left: 4.375%;
+	top: 9.39%;
+	width: 7.7083%;
+	height: 11.72%;
+	background-image: url('Castle Front Blue.png');
+	background-size: 100% 100%;
+	z-index: 100;
+	opacity: 0;
+}
+#TeamBlueFlagpole{
+	left: 943px;
+	top: 7.80%;
+}
+#SingleFlagBlue{
+	position: absolute;
+	left: 869px;
+	top: 393px;
+	height: 34px;
+	width: 78.9px;
+	background-image: url('Single Flag Blue Frames.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	animation: single_flag_anim 0.5s steps(12) infinite;
+	z-index: 19;
+}
+
+
+/*Team Red*/
+#TeamRedIsland{
+	position: absolute;
+	top: 1000px;
+	left: 7500px;
+	background-image: url('Team Blue Island.png');
+	background-size: 100% 100%;
+}
+#TeamRedCastleBack1{
+	position: absolute;
+	top: 9.39%;
+	left: 7573px;
+	width: 7.7083%;
+	height: 11.72%;
+	background-image: url('Castle Back Red 2.png');
+	background-size: 100% 100%;
+}
+#TeamRedCastleFront{
+	position: absolute;
+	top: 9.39%;
+	left: 7573px;
+	width: 7.7083%;
+	height: 11.72%;
+	background-image: url('Castle Front Red.png');
+	background-size: 100% 100%;
+	z-index: 100;
+	opacity: 0;
+}
+#TeamRedFlagpole{
+	top: 7.80%;
+	left: 8074px;
+}
+#SingleFlagRed{
+	position: absolute;
+	left: 7996px;
+	top: 393px;
+	height: 34px;
+	width: 78.9px;
+	background-image: url('Single Flag Blue Frames.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	filter: hue-rotate(145deg);
+	animation: single_flag_anim 0.5s steps(12) infinite;
+	z-index: 19;
+}
+
+
+.potion {
+	width: 49px;
+	height: 68px;
+	background-image: url('Potion Frames.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	animation: potion_anim 1.21s steps(51) infinite;
+}
+#potion1 {
+	position: absolute;
+	left: 2343px;
+	top: 357px;
+}
+@keyframes potion_anim{
+    0% {background-position-x:0%;}
+    100% {background-position-x:102.01%;}
+}
+
+
+#platform2{
+position: absolute;
+top:1000px;
+left:2000px;
+width:500px;
+height:210px;
+}
+#platform3{
+position: absolute;
+top:1000px;
+left:3000px;
+width:500px;
+height:210px;
+}
+#platform4{
+position: absolute;
+top:1000px;
+left:4000px;
+width:1035px;
+height:425px;
+}
+#platform5{
+position: absolute;
+top:1000px;
+left:5500px;
+width:500px;
+height:210px;
+}
+#platform6{
+position: absolute;
+top:1000px;
+left:6500px;
+width:500px;
+height:210px;
+}
+#platform8{
+position: absolute;
+top:600px;
+left:3400px;
+width:500px;
+height:210px;
+}
+#platform9{
+position: absolute;
+top:400px;
+left:2000px;
+width:1035px;
+height:425px;
+}
+#platform10{
+position: absolute;
+top:600px;
+left:5100px;
+width:500px;
+height:210px;
+}
+#platform11{
+position: absolute;
+top:400px;
+left:6000px;
+width:1035px;
+height:425px;
+}
+#platform12{
+position: absolute;
+top:1700px;
+left:2100px;
+width:500px;
+height:210px;
+}
+#platform13{
+position: absolute;
+top:1600px;
+left:3100px;
+width:500px;
+height:210px;
+}
+#platform14{
+position: absolute;
+top:1600px;
+left:5400px;
+width:500px;
+height:210px;
+}
+#platform15{
+position: absolute;
+top:1700px;
+left:6400px;
+width:500px;
+height:210px;
+}
+.island{
+	width:inherit;
+}

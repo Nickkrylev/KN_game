@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Knight League </title>
+		<link href='Style.css' rel='stylesheet'>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div id="main">
+			<div id="gameName"></div>
+			
+			
+			<input class="ok" type="url" id="connectInput2" placeholder="Enter server ip" spellcheck="false" onfocusout="checkEmptyInput()">
+			<div  id="ConnectToserver" class="actionButton">  Connect   </div>
+			<a href="main menu.html" id="back" class="actionButton">  Main menu  </a>
+			
+			
+			<script src='find game.js'>
+			</script>
+			<script>
+		
+			function checkEmptyInput(){
+				
+				if(connectInput2.value!=''){		
+					connectInput2.style.border = "7px solid #282c42";
+					connectInput2.style.color = "#5c6282";
+					connectInput2.classList.remove("error");					
+				}
+				else{
+					connectInput2.style.border = "7px solid #893b3b";
+					connectInput2.style.color = "#b06161";
+					connectInput2.classList.add("error");
+				}
+				
+			}
+		</script>
+		</div>
+	</body>
+</html>
